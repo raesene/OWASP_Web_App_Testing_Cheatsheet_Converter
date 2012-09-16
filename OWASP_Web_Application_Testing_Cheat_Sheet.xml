@@ -178,6 +178,7 @@
 <tasks>
 <task> Test Web Messaging</task>
 <task> Test for Web Storage SQL injection</task>
+</tasks>
 </section>
 </sections>
 </methodology>

@@ -1,6 +1,11 @@
 #!/usr/bin/env ruby
 
-input_file = File.open('base_cheat_sheet.txt','r+').readlines
+unless ARGV.length > 0
+  puts "The syntax is convert-cheat-sheet-to-dradis-pro.rb <input_file_name>"
+  exit
+end
+
+input_file = File.open(ARGV[0],'r+').readlines
 
 output_file = File.new('OWASP_Web_Application_Testing_Cheat_Sheet.xml','w+')
 
@@ -28,6 +33,7 @@ input_file.each do |line|
 
 end
 
+output_file.puts "</tasks>"
 output_file.puts "</section>"
 output_file.puts "</sections>"
 output_file.puts "</methodology>"
